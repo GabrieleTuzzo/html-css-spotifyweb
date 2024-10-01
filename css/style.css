@@ -104,6 +104,15 @@ button {
     width: 50%;
 }
 
+.player-settings {
+    display: flex;
+    color: white;
+    font-size: 14px;
+    gap: 18px;
+    padding-right: 10px;
+    margin-left: 20px;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 991.98px) { 
     
