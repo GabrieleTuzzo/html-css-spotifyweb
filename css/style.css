@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.app-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+.player {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-controls {
+    width: 50%;
+}
+
+/* DEBUG */
+.debug .player {
+    border: 1px solid black;
+}
+
+.debug .player > * {
+    border: 1px dashed hotpink;
+}
+
+.debug .main-content {
+    border: 1px solid red;
+}
