@@ -12,6 +12,15 @@
 
 .main-content {
     flex-grow: 1;
+    display: flex;
+}
+
+.main-sidebar {
+    width: 230px;
+}
+
+.main-window {
+    flex-grow: 1;
 }
 
 .player {
@@ -36,4 +45,12 @@
 
 .debug .main-content {
     border: 1px solid red;
+}
+
+.debug .main-window {
+    border: 2px dashed cornflowerblue;
+}
+
+.debug .main-sidebar {
+    border: 2px dashed;
 }
