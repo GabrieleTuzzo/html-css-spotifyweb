@@ -104,11 +104,24 @@ button {
     width: 50%;
 }
 
+.controls-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    font-size: 14px;
+    color: white;
+}
+
+.controls-buttons .play-button {
+    font-size: 30px;
+    margin: 0 10px;
+}
+
 .player-settings {
     display: flex;
     color: white;
     font-size: 14px;
-    gap: 18px;
+    gap: 1vw;
     padding-right: 10px;
     margin-left: 20px;
 }
@@ -126,6 +139,12 @@ button {
 @media (max-width: 575.98px) {
     .main-sidebar {
         width: 50px;
+    }
+
+    .track-buttons {
+        flex-direction: column;
+        gap: 4px;
+        font-size: 16px;
     }
 }
 
