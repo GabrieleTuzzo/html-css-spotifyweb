@@ -1,7 +1,33 @@
+:root {
+    --black: #000000;
+    --dark-blue: #141922;
+    --gray: #6F6F6F;
+    --light-gray: #C1C1C1;
+    --dark-gray: #282828;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+img {
+    display: block;
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	outline: inherit;
+    cursor: pointer;
 }
 
 .app-container {
@@ -15,19 +41,63 @@
     display: flex;
 }
 
+/* SIDEBAR */
 .main-sidebar {
     width: 230px;
 }
 
+/* MAIN WINDOW */
 .main-window {
     flex-grow: 1;
 }
 
+/* PLAYER */
 .player {
     height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--dark-gray);
+}
+
+.player-track {
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    margin-right: 44px;
+}
+
+.track-cover {
+    margin-right: 12px;
+}
+
+.track-cover img {
+    max-width: 42px;
+}
+
+.track-info {
+    margin-right: 24px;
+}
+
+.track-info > * {
+    font-weight: 600;
+}
+
+.track-info p {
+    color: white;
+    font-size: 14px;
+}
+
+.track-info span {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.track-buttons {
+    color: var(--gray);
+    display: flex;
+    gap: 14px;
+    font-size: 20px;
 }
 
 .player-controls {
