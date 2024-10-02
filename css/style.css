@@ -1,8 +1,8 @@
 :root {
     --black: #000000;
     --dark-blue: #141922;
-    --gray: #6F6F6F;
-    --light-gray: #C1C1C1;
+    --gray: #6f6f6f;
+    --light-gray: #c1c1c1;
     --dark-gray: #282828;
 }
 
@@ -21,12 +21,12 @@ img {
 }
 
 button {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	outline: inherit;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: inherit;
     cursor: pointer;
 }
 
@@ -57,20 +57,22 @@ ul {
     padding-bottom: 8px;
     font-size: 12px;
     font-weight: 600;
+    z-index: 100;
 }
 
-.sidebar-logo img{
+.sidebar-logo img {
     height: 40px;
 }
 
-.sidebar-links svg{
+.sidebar-links svg {
     height: 22px;
-    color: var(--gray);    
+    color: var(--gray);
 }
 
 .sidebar-links button {
     display: flex;
     align-items: center;
+    gap: 6px;
 }
 
 .sidebar-links .flex-list {
@@ -88,7 +90,12 @@ ul {
 }
 
 .sidebar-playlist .flex-list {
-    gap: 22px;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.sidebar-playlist button {
+    line-height: 28px;
 }
 
 .create-playlist {
@@ -127,6 +134,11 @@ ul {
     width: 100%;
 }
 
+.account-info span {
+    color: white;
+    font-size: 14px;
+}
+
 .sidebar-account svg {
     height: 18px;
     background-color: var(--gray);
@@ -136,7 +148,44 @@ ul {
 
 /* MAIN WINDOW */
 .main-window {
+    background-color: var(--dark-blue);
     flex-grow: 1;
+}
+
+.main-navbar {
+    color: var(--gray);
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.main-navbar .flex-list {
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 100px;
+    justify-content: center;
+    gap: 12px;
+}
+
+.banner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.banner button {
+    line-height: 42px;
+    border: 1px solid white;
+    border-radius: 999px;
+    text-transform: uppercase;
+    padding: 0 58px;
+    font-weight: 600;
+    margin-right: 20px;
 }
 
 /* PLAYER */
@@ -251,14 +300,11 @@ ul {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 991.98px) { 
-    
+@media (max-width: 991.98px) {
 }
 
 @media (max-width: 767.98px) {
-    
 }
-
 
 @media (max-width: 575.98px) {
     .main-sidebar {
