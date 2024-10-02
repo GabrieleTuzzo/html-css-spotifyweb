@@ -30,6 +30,10 @@ button {
     cursor: pointer;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .app-container {
     height: 100vh;
     display: flex;
@@ -43,7 +47,91 @@ button {
 
 /* SIDEBAR */
 .main-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
     width: 230px;
+    color: var(--gray);
+    background-color: var(--black);
+    padding: 20px;
+    padding-bottom: 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.sidebar-logo img{
+    height: 40px;
+}
+
+.sidebar-links svg{
+    height: 22px;
+    color: var(--gray);    
+}
+
+.sidebar-links button {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-links .flex-list {
+    gap: 8px;
+}
+
+.sidebar-playlist {
+    font-size: 12px;
+}
+
+.sidebar-playlist h3 {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.sidebar-playlist .flex-list {
+    gap: 22px;
+}
+
+.create-playlist {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.create-playlist .plus-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    aspect-ratio: 1/1;
+    color: var(--black);
+    background-color: var(--gray);
+    font-size: 18px;
+}
+
+.sidebar-account {
+    margin-top: auto;
+}
+
+.sidebar-account .download-app {
+    border-bottom: 1px solid var(--gray);
+    width: 100%;
+    text-align: left;
+    padding: 6px;
+}
+
+.sidebar-account .account-info {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    gap: 12px;
+    width: 100%;
+}
+
+.sidebar-account svg {
+    height: 18px;
+    background-color: var(--gray);
+    border-radius: 999px;
+    aspect-ratio: 1/1;
 }
 
 /* MAIN WINDOW */
@@ -54,6 +142,7 @@ button {
 /* PLAYER */
 .player {
     height: 90px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,7 +152,6 @@ button {
 .player-track {
     display: flex;
     align-items: center;
-    padding-left: 12px;
     margin-right: 20px;
 }
 
@@ -137,7 +225,8 @@ button {
 }
 
 .player-settings .bar {
-    width: calc(5vw + 10px);
+    width: 80px;
+    flex-grow: 1;
     margin: 0;
 }
 
@@ -146,10 +235,19 @@ button {
     color: white;
     font-size: 14px;
     gap: 1vw;
-    padding-right: 10px;
     margin-left: 20px;
     align-items: center;
     justify-content: space-between;
+}
+
+/* UTILITIES */
+.flex-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.d-none-lg {
+    display: none;
 }
 
 /* MEDIA QUERIES */
@@ -171,6 +269,43 @@ button {
         flex-direction: column;
         gap: 4px;
         font-size: 16px;
+    }
+
+    .player-track {
+        margin-right: 10px;
+    }
+
+    .player-settings {
+        margin-left: 10px;
+    }
+
+    .main-sidebar {
+        padding: 5px 11px;
+    }
+
+    .sidebar-logo img {
+        height: 28px;
+    }
+
+    .main-sidebar {
+        align-items: center;
+    }
+
+    .sidebar-account .download-app {
+        border-bottom: none;
+        padding: 6px;
+    }
+
+    .sidebar-account .account-info {
+        justify-content: center;
+    }
+
+    .d-none-sm {
+        display: none;
+    }
+
+    .d-block-sm {
+        display: block;
     }
 }
 
