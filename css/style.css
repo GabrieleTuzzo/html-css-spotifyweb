@@ -4,6 +4,7 @@
     --gray: #6f6f6f;
     --light-gray: #c1c1c1;
     --dark-gray: #282828;
+    --brand-color: #ADFF2F;
 }
 
 html {
@@ -159,6 +160,7 @@ ul {
 }
 
 .banner {
+    z-index: 100;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -199,6 +201,10 @@ ul {
     margin-right: 18px;
     justify-content: center;
     gap: 12px;
+}
+
+.window-navbar .flex-list li {
+    position: relative;
 }
 
 .window-section {
@@ -400,6 +406,17 @@ ul {
 }
 
 /* HOVER STYLES */
+.window-navbar .active::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 38px;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--brand-color);
+}
+
 .card:hover {
     cursor: pointer;
 
@@ -408,7 +425,24 @@ ul {
     }
 }
 
+.banner button:hover {
+    transform: scale(1.08);
+}
 
+.window-navbar li:hover {
+    color: white;
+}
+
+.player button:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.player .track-info span:hover {
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
+}
 
 /* UTILITIES */
 .flex-list {
