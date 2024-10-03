@@ -392,6 +392,10 @@ ul {
     color: white;
 }
 
+.controls-timeline .bar .active-bar {
+    width: 50%;
+}
+
 .bar {
     flex-grow: 1;
     margin: 0 1vw;
@@ -399,6 +403,27 @@ ul {
     height: 4px;
     border-radius: 999px;
     background-color: var(--gray);
+}
+
+.bar .active-bar {
+    position: relative;
+    border-radius: 999px;
+    height: 4px;
+    background-color: var(--light-gray);
+}
+
+.bar .active-bar:after {
+    content: "";
+    position: absolute;
+    display: none;
+    height: 10px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid var(--light-gray);
+    left: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .player-settings .bar {
@@ -415,6 +440,10 @@ ul {
     margin-left: 20px;
     align-items: center;
     justify-content: space-between;
+}
+
+.player-settings .bar .active-bar {
+    width: 40%;
 }
 
 /* HOVER STYLES */
@@ -480,6 +509,14 @@ ul {
 
 .main-sidebar a:hover {
     color: white;
+}
+
+.bar:hover .active-bar {
+    background-color: var(--brand-color);
+}
+
+.bar:hover .active-bar:after {
+    display: block;
 }
 
 /* UTILITIES */
