@@ -5,6 +5,7 @@
     --light-gray: #c1c1c1;
     --dark-gray: #282828;
     --brand-color: #ADFF2F;
+    --sidebar-padding-x: 20px;
 }
 
 html {
@@ -62,8 +63,13 @@ ul {
     background-color: var(--black);
     padding: 20px;
     padding-bottom: 8px;
+    padding-left: 0px;
     font-size: 12px;
     font-weight: 600;
+}
+
+.sidebar-logo {
+    padding-left: var(--sidebar-padding-x);
 }
 
 .sidebar-logo img {
@@ -72,20 +78,26 @@ ul {
 
 .sidebar-links svg {
     height: 22px;
-    color: var(--gray);
 }
 
 .sidebar-links button {
     display: flex;
     align-items: center;
     gap: 6px;
+    color: var(--gray);
+    width: 100%;
 }
 
 .sidebar-links .flex-list {
     gap: 8px;
 }
 
+.sidebar-links .flex-list li {
+    padding-left: var(--sidebar-padding-x);
+}
+
 .sidebar-playlist {
+    padding-left: var(--sidebar-padding-x);
     font-size: 12px;
 }
 
@@ -101,6 +113,8 @@ ul {
 }
 
 .sidebar-playlist a {
+    display: block;
+    height: 100%;
     line-height: 28px;
 }
 
@@ -108,6 +122,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 8px;
+    width: 100%;
 }
 
 .create-playlist .plus-icon {
@@ -122,6 +137,7 @@ ul {
 }
 
 .sidebar-account {
+    padding-left: var(--sidebar-padding-x);
     margin-top: auto;
 }
 
@@ -201,10 +217,6 @@ ul {
     margin-right: 18px;
     justify-content: center;
     gap: 12px;
-}
-
-.window-navbar .flex-list li {
-    position: relative;
 }
 
 .window-section {
@@ -406,6 +418,11 @@ ul {
 }
 
 /* HOVER STYLES */
+.active,
+.active * {
+    color: white;
+}
+
 .window-navbar .active::before {
     content: "";
     position: absolute;
@@ -414,6 +431,15 @@ ul {
     top: 15px;
     left: 50%;
     transform: translateX(-50%);
+    background-color: var(--brand-color);
+}
+
+.sidebar-links .active::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    left: 0;
     background-color: var(--brand-color);
 }
 
@@ -444,10 +470,26 @@ ul {
     text-decoration: underline;
 }
 
+.main-sidebar button:hover {
+    color: white;
+
+    .plus-icon {
+        background-color: white;
+    }
+}
+
+.main-sidebar a:hover {
+    color: white;
+}
+
 /* UTILITIES */
 .flex-list {
     display: flex;
     flex-direction: column;
+}
+
+.flex-list li {
+    position: relative;
 }
 
 .d-none-lg {
