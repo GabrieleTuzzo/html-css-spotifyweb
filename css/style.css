@@ -252,6 +252,22 @@ ul {
     color: var(--gray);
 }
 
+.window-section .card-img {
+    position: relative;
+}
+
+.card .card-img .img-icon {
+    position: absolute;
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    aspect-ratio: 1/1;
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 .window-section .card-img img {
     width: 100%;
 }
@@ -275,6 +291,10 @@ ul {
 }
 
 .popular-artists .card-img img {
+    border-radius: 50%;
+}
+
+.popular-artists .img-icon {
     border-radius: 50%;
 }
 
@@ -380,6 +400,14 @@ ul {
 }
 
 /* HOVER STYLES */
+.card:hover {
+    cursor: pointer;
+
+    .card-img .img-icon {
+        display: flex;
+    }
+}
+
 
 
 /* UTILITIES */
